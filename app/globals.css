@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-slate-800 bg-white;
+  }
+
+  h1, h2, h3, h4 {
+    @apply tracking-tight;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-accent text-white font-medium px-6 py-3 rounded-lg
+           hover:bg-accent-dark transition-colors duration-200 text-sm;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 border border-slate-300 text-slate-700 font-medium px-6 py-3 rounded-lg
+           hover:border-slate-400 hover:bg-slate-50 transition-colors duration-200 text-sm;
+  }
+
+  .btn-ghost-white {
+    @apply inline-flex items-center gap-2 border border-white/30 text-white font-medium px-6 py-3 rounded-lg
+           hover:bg-white/10 transition-colors duration-200 text-sm;
+  }
+
+  .section-label {
+    @apply text-xs font-semibold tracking-widest uppercase text-accent;
+  }
+
+  .prose-consulting p {
+    @apply text-slate-600 leading-relaxed;
+  }
+}
+
+/* Smooth anchor link offset for fixed nav */
+:target {
+  scroll-margin-top: 80px;
+}
