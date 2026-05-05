@@ -40,15 +40,15 @@ const credentials = [
 const values = [
   {
     title: 'Operator first',
-    body: 'I\'ve sat in your seat. I\'ve made payroll, managed churn, tried to price a service fairly, and felt the frustration of having something good that isn\'t growing the way it should. That context changes how advice lands.',
+    body: "I've sat in your seat. I've made payroll, managed churn, tried to price a service fairly, and felt the frustration of having something good that isn't growing the way it should. That context changes how advice lands.",
   },
   {
     title: 'Clarity over comfort',
-    body: 'The most useful thing I can do is tell you the truth about where your commercial model is broken — not validate the story you\'ve been telling yourself. I do this with care, but I do it.',
+    body: "The most useful thing I can do is tell you the truth about where your commercial model is broken — not validate the story you've been telling yourself. I do this with care, but I do it.",
   },
   {
     title: 'Execution over strategy',
-    body: 'Strategy that can\'t be executed is just expensive wallpaper. Everything I produce is built for your team to run without me. If I can\'t make it actionable, it\'s not finished.',
+    body: "Strategy that can't be executed is just expensive wallpaper. Everything I produce is built for your team to run without me. If I can't make it actionable, it's not finished.",
   },
 ]
 
@@ -56,12 +56,12 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-navy-900 text-white py-20">
+      <section className="bg-forest-900 text-white py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="section-label text-accent-light mb-4">About</p>
-              <h1 className="text-5xl font-semibold mb-5">
+              <p className="section-label text-amber-light mb-4">About</p>
+              <h1 className="font-display text-5xl font-bold mb-5">
                 Nathan Carroll
               </h1>
               <p className="text-xl text-white/60 leading-relaxed">
@@ -70,11 +70,11 @@ export default function AboutPage() {
               </p>
             </div>
 
-            {/* Avatar placeholder — replace with a real photo */}
+            {/* Avatar placeholder */}
             <div className="flex justify-start lg:justify-end">
-              <div className="w-48 h-48 rounded-2xl bg-navy-800 border border-white/10 flex items-center justify-center">
+              <div className="w-48 h-48 rounded-2xl bg-forest-800 border border-white/10 flex items-center justify-center">
                 <div className="text-center">
-                  <div className="text-5xl font-bold text-white/20 mb-1">NC</div>
+                  <div className="font-display text-5xl font-bold text-white/20 mb-1">NC</div>
                   <p className="text-white/30 text-xs">Add your photo</p>
                 </div>
               </div>
@@ -89,8 +89,8 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
               <p className="section-label mb-4">My background</p>
-              <h2 className="text-3xl font-semibold text-navy-900 mb-6">
-                I built a business like yours. That&apos;s why this works.
+              <h2 className="font-display text-3xl font-bold text-forest-900 mb-6">
+                I built a business like yours. <span className="italic font-normal">That&apos;s why this works.</span>
               </h2>
 
               <div className="space-y-5 text-slate-600 leading-relaxed">
@@ -123,8 +123,8 @@ export default function AboutPage() {
 
             {/* Sidebar quick facts */}
             <div>
-              <div className="bg-stone-50 border border-slate-200 rounded-xl p-6 sticky top-24">
-                <p className="text-xs font-semibold tracking-widest uppercase text-slate-400 mb-5">
+              <div className="bg-cream-100 border border-cream-200 rounded-xl p-6 sticky top-24">
+                <p className="text-xs font-medium text-slate-400 mb-5">
                   Quick facts
                 </p>
                 <div className="space-y-4">
@@ -137,7 +137,7 @@ export default function AboutPage() {
                   ].map((fact) => (
                     <div key={fact.label} className="flex flex-col gap-0.5">
                       <p className="text-xs text-slate-400 font-medium">{fact.label}</p>
-                      <p className="text-sm text-navy-900 font-medium">{fact.value}</p>
+                      <p className="text-sm text-forest-900 font-medium">{fact.value}</p>
                     </div>
                   ))}
                 </div>
@@ -148,22 +148,22 @@ export default function AboutPage() {
       </section>
 
       {/* Credentials */}
-      <section className="bg-stone-50 py-20">
+      <section className="bg-cream-100 py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="mb-10">
             <p className="section-label mb-4">Track record</p>
-            <h2 className="text-3xl font-semibold text-navy-900">Experience that matters here</h2>
+            <h2 className="font-display text-3xl font-bold text-forest-900">Experience that matters here</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {credentials.map((group) => (
-              <div key={group.category} className="bg-white border border-slate-200 rounded-xl p-6">
-                <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">
+              <div key={group.category} className="bg-white border border-cream-200 rounded-xl p-6 shadow-sm">
+                <p className="text-xs font-medium text-amber mb-4">
                   {group.category}
                 </p>
                 <ul className="space-y-3">
                   {group.items.map((item) => (
                     <li key={item} className="flex items-start gap-3">
-                      <div className="w-1 h-1 rounded-full bg-accent mt-2 flex-shrink-0" />
+                      <div className="w-1 h-1 rounded-full bg-amber mt-2 flex-shrink-0" />
                       <span className="text-sm text-slate-600 leading-relaxed">{item}</span>
                     </li>
                   ))}
@@ -179,12 +179,12 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="mb-10">
             <p className="section-label mb-4">How I work</p>
-            <h2 className="text-3xl font-semibold text-navy-900">What you can expect</h2>
+            <h2 className="font-display text-3xl font-bold text-forest-900">What you can expect</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {values.map((v) => (
-              <div key={v.title} className="border-l-2 border-accent pl-6 py-1">
-                <h3 className="font-semibold text-navy-900 mb-3">{v.title}</h3>
+              <div key={v.title} className="border-l-2 border-amber pl-6 py-1">
+                <h3 className="font-semibold text-forest-900 mb-3">{v.title}</h3>
                 <p className="text-slate-600 text-sm leading-relaxed">{v.body}</p>
               </div>
             ))}

@@ -15,13 +15,13 @@ export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-100">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-cream-50/95 backdrop-blur-sm border-b border-cream-200">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
 
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <span className="font-semibold text-navy-900 text-lg tracking-tight group-hover:text-accent transition-colors">
-            NMC<span className="text-accent">.</span>
+          <span className="font-display font-bold text-forest-900 text-xl tracking-tight group-hover:text-amber transition-colors">
+            NMC<span className="text-amber">.</span>
           </span>
           <span className="hidden sm:block text-slate-400 text-sm font-normal">Consulting</span>
         </Link>
@@ -34,8 +34,8 @@ export default function Nav() {
               href={href}
               className={`text-sm transition-colors duration-150 ${
                 pathname === href
-                  ? 'text-accent font-medium'
-                  : 'text-slate-600 hover:text-slate-900'
+                  ? 'text-amber font-medium'
+                  : 'text-slate-600 hover:text-forest-900'
               }`}
             >
               {label}
@@ -73,14 +73,14 @@ export default function Nav() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden border-t border-slate-100 bg-white px-6 py-4 flex flex-col gap-4">
+        <div className="md:hidden border-t border-cream-200 bg-cream-50 px-6 py-4 flex flex-col gap-4">
           {links.map(({ href, label }) => (
             <Link
               key={href}
               href={href}
               onClick={() => setMenuOpen(false)}
               className={`text-sm py-1 ${
-                pathname === href ? 'text-accent font-medium' : 'text-slate-700'
+                pathname === href ? 'text-amber font-medium' : 'text-slate-700'
               }`}
             >
               {label}

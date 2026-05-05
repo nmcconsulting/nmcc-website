@@ -9,26 +9,28 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        navy: {
-          950: '#060E1B',
-          900: '#0C1A2E',
-          800: '#112340',
-          700: '#1A3258',
-          600: '#234070',
+        forest: {
+          950: '#0E1A0D',
+          900: '#1C2B1A',
+          800: '#253822',
+          700: '#2E4529',
+          600: '#3A5533',
         },
-        accent: {
-          DEFAULT: '#3B6FD4',
-          dark: '#2A54A8',
-          light: '#6B97E8',
-          subtle: '#EEF3FC',
+        amber: {
+          DEFAULT: '#C17A3A',
+          dark: '#A35F22',
+          light: '#D9A06B',
+          subtle: '#FBF3E8',
         },
-        stone: {
-          50: '#FAFAF8',
-          100: '#F4F3F0',
+        cream: {
+          50: '#FFFDF9',
+          100: '#F5F0E8',
+          200: '#EDE5D8',
         },
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        display: ['var(--font-playfair)', 'Georgia', 'serif'],
       },
       fontSize: {
         '5xl': ['3rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],

@@ -20,13 +20,13 @@
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center gap-2 bg-accent text-white font-medium px-6 py-3 rounded-lg
-           hover:bg-accent-dark transition-colors duration-200 text-sm;
+    @apply inline-flex items-center gap-2 bg-amber text-white font-medium px-6 py-3 rounded-lg
+           hover:bg-amber-dark transition-colors duration-200 text-sm;
   }
 
   .btn-outline {
     @apply inline-flex items-center gap-2 border border-slate-300 text-slate-700 font-medium px-6 py-3 rounded-lg
-           hover:border-slate-400 hover:bg-slate-50 transition-colors duration-200 text-sm;
+           hover:border-forest-900 hover:text-forest-900 hover:bg-cream-100 transition-colors duration-200 text-sm;
   }
 
   .btn-ghost-white {
@@ -34,12 +34,18 @@
            hover:bg-white/10 transition-colors duration-200 text-sm;
   }
 
+  /* Section labels — warm and understated, not shouting */
   .section-label {
-    @apply text-xs font-semibold tracking-widest uppercase text-accent;
+    @apply text-sm font-medium text-amber tracking-normal;
   }
 
   .prose-consulting p {
     @apply text-slate-600 leading-relaxed;
+  }
+
+  /* Display serif class for hero headlines */
+  .headline-display {
+    @apply font-display;
   }
 }
 

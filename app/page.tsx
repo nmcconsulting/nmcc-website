@@ -53,29 +53,35 @@ const icpItems = [
 export default function HomePage() {
   return (
     <>
-      {/* ── Hero ── */}
-      <section className="bg-navy-900 text-white min-h-[88vh] flex items-center relative overflow-hidden">
-        {/* Subtle grid texture */}
+      {/* Hero */}
+      <section className="bg-forest-900 text-white min-h-[88vh] flex items-center relative overflow-hidden">
+        {/* Subtle dot texture */}
         <div
-          className="absolute inset-0 opacity-[0.03]"
+          className="absolute inset-0 opacity-[0.04]"
           style={{
             backgroundImage:
-              'linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)',
-            backgroundSize: '64px 64px',
+              'radial-gradient(circle at 1px 1px, rgba(255,255,255,0.8) 1px, transparent 0)',
+            backgroundSize: '32px 32px',
+          }}
+        />
+        {/* Warm amber glow */}
+        <div
+          className="absolute top-0 right-0 w-[600px] h-[600px] opacity-10 pointer-events-none"
+          style={{
+            background: 'radial-gradient(circle at center, #C17A3A 0%, transparent 70%)',
           }}
         />
 
         <div className="max-w-6xl mx-auto px-6 py-24 relative z-10">
           <div className="max-w-3xl">
-            {/* Eyebrow */}
-            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-8">
-              <span className="w-2 h-2 rounded-full bg-accent-light" />
-              <span className="text-sm text-white/80 font-medium">Cloud &amp; MSP Product Strategy</span>
+            <div className="inline-flex items-center gap-2 bg-white/8 border border-white/15 rounded-full px-4 py-1.5 mb-8">
+              <span className="w-2 h-2 rounded-full bg-amber-light" />
+              <span className="text-sm text-white/75 font-medium">Cloud &amp; MSP Product Strategy · UK</span>
             </div>
 
-            <h1 className="text-5xl font-semibold leading-[1.1] tracking-tight mb-6">
+            <h1 className="font-display text-5xl font-bold leading-[1.1] mb-6">
               You built the platform.{' '}
-              <span className="text-accent-light">Now let&apos;s build the product.</span>
+              <span className="text-amber-light italic">Now let&apos;s build the product.</span>
             </h1>
 
             <p className="text-xl text-white/65 leading-relaxed mb-10 max-w-2xl">
@@ -96,23 +102,22 @@ export default function HomePage() {
               </Link>
             </div>
 
-            {/* Trust line */}
-            <p className="mt-8 text-sm text-white/35">
+            <p className="mt-8 text-sm text-white/35 font-display italic">
               No pitch. No proposal. A focused 60-minute diagnostic — then you decide.
             </p>
           </div>
         </div>
       </section>
 
-      {/* ── Problem Statement ── */}
+      {/* Problem Statement */}
       <section className="bg-white py-24">
         <div className="max-w-6xl mx-auto px-6">
           <div className="max-w-3xl">
             <p className="section-label mb-4">The gap we close</p>
-            <h2 className="text-4xl font-semibold mb-6 text-navy-900">
+            <h2 className="font-display text-4xl font-bold mb-6 text-forest-900">
               Your platform works.
               <br />
-              Your business model doesn&apos;t — yet.
+              <span className="italic font-normal">Your business model doesn&apos;t — yet.</span>
             </h2>
             <p className="text-lg text-slate-600 leading-relaxed mb-6">
               Most technical founders hit the same wall. You&apos;ve built something genuinely good — a managed
@@ -128,12 +133,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── The Product Unlock Method ── */}
-      <section className="bg-stone-50 py-24">
+      {/* The Product Unlock Method */}
+      <section className="bg-cream-100 py-24">
         <div className="max-w-6xl mx-auto px-6">
           <div className="mb-12">
             <p className="section-label mb-4">How we work</p>
-            <h2 className="text-4xl font-semibold text-navy-900 mb-4">
+            <h2 className="font-display text-4xl font-bold text-forest-900 mb-4">
               The Product Unlock Method
             </h2>
             <p className="text-slate-500 text-lg max-w-xl">
@@ -146,22 +151,19 @@ export default function HomePage() {
             {phases.map((phase, i) => (
               <div
                 key={phase.step}
-                className="bg-white border border-slate-200 rounded-xl p-7 relative overflow-hidden"
+                className="bg-white border border-cream-200 rounded-xl p-7 relative overflow-hidden shadow-sm"
               >
-                {/* Phase number background */}
-                <span className="absolute top-5 right-6 text-7xl font-bold text-slate-50 select-none leading-none">
+                <span className="absolute top-5 right-6 text-7xl font-display font-bold text-cream-100 select-none leading-none">
                   {i + 1}
                 </span>
 
-                <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-3">
-                  {phase.step}
-                </p>
-                <h3 className="text-xl font-semibold text-navy-900 mb-3">{phase.title}</h3>
+                <p className="section-label mb-3">{phase.step}</p>
+                <h3 className="font-display text-xl font-bold text-forest-900 mb-3">{phase.title}</h3>
                 <p className="text-slate-600 text-sm leading-relaxed mb-6">{phase.description}</p>
 
-                <div className="pt-4 border-t border-slate-100">
+                <div className="pt-4 border-t border-cream-200">
                   <p className="text-xs text-slate-400 mb-1">Deliverable</p>
-                  <p className="text-sm font-medium text-navy-800">{phase.output}</p>
+                  <p className="text-sm font-medium text-forest-800">{phase.output}</p>
                 </div>
               </div>
             ))}
@@ -172,28 +174,28 @@ export default function HomePage() {
               Every engagement ends with three documents you own and can execute without us.
             </p>
             <Link href="/how-we-work" className="btn-outline">
-              Full methodology detail →
+              Full methodology detail &rarr;
             </Link>
           </div>
         </div>
       </section>
 
-      {/* ── Who it's for ── */}
+      {/* Who it is for */}
       <section className="bg-white py-24">
         <div className="max-w-6xl mx-auto px-6">
           <div className="mb-12">
             <p className="section-label mb-4">Who we work with</p>
-            <h2 className="text-4xl font-semibold text-navy-900">
+            <h2 className="font-display text-4xl font-bold text-forest-900">
               Built for technical founders
               <br />
-              who are done flying blind.
+              <span className="italic font-normal">who are done flying blind.</span>
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {icpItems.map((item) => (
-              <div key={item.title} className="border-l-2 border-accent pl-6 py-1">
-                <h3 className="font-semibold text-navy-900 mb-2">{item.title}</h3>
+              <div key={item.title} className="border-l-2 border-amber pl-6 py-1">
+                <h3 className="font-semibold text-forest-900 mb-2">{item.title}</h3>
                 <p className="text-slate-600 text-sm leading-relaxed">{item.description}</p>
               </div>
             ))}
@@ -201,13 +203,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── About Nathan ── */}
-      <section className="bg-stone-50 py-24">
+      {/* About Nathan */}
+      <section className="bg-cream-100 py-24">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <p className="section-label mb-4">About NMC</p>
-              <h2 className="text-3xl font-semibold text-navy-900 mb-5">
+              <h2 className="font-display text-3xl font-bold text-forest-900 mb-5">
                 Operator knowledge. Strategic clarity.
               </h2>
               <p className="text-slate-600 leading-relaxed mb-4">
@@ -224,7 +226,6 @@ export default function HomePage() {
               </Link>
             </div>
 
-            {/* Credential cards */}
             <div className="grid grid-cols-1 gap-4">
               {[
                 { label: 'Built & run', value: 'An MSP from the ground up' },
@@ -234,14 +235,14 @@ export default function HomePage() {
               ].map((item) => (
                 <div
                   key={item.label}
-                  className="flex items-start gap-4 bg-white border border-slate-200 rounded-lg px-5 py-4"
+                  className="flex items-start gap-4 bg-white border border-cream-200 rounded-lg px-5 py-4 shadow-sm"
                 >
-                  <div className="w-1 h-full min-h-[2rem] bg-accent rounded-full flex-shrink-0 mt-0.5" />
+                  <div className="w-1 h-full min-h-[2rem] bg-amber rounded-full flex-shrink-0 mt-0.5" />
                   <div>
                     <p className="text-xs text-slate-400 font-medium uppercase tracking-wide mb-0.5">
                       {item.label}
                     </p>
-                    <p className="text-sm font-medium text-navy-900">{item.value}</p>
+                    <p className="text-sm font-medium text-forest-900">{item.value}</p>
                   </div>
                 </div>
               ))}
@@ -250,7 +251,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── CTA ── */}
       <CTABanner />
     </>
   )

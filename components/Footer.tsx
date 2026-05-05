@@ -9,15 +9,15 @@ const footerLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-navy-950 text-white/70">
+    <footer className="bg-forest-950 text-white/70">
       <div className="max-w-6xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 pb-12 border-b border-white/10">
 
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <span className="font-semibold text-white text-lg tracking-tight">
-                NMC<span className="text-accent">.</span>
+              <span className="font-display font-bold text-white text-xl tracking-tight">
+                NMC<span className="text-amber">.</span>
               </span>
               <span className="text-white/40 text-sm">Consulting</span>
             </div>
@@ -28,7 +28,7 @@ export default function Footer() {
 
           {/* Links */}
           <div>
-            <p className="text-xs font-semibold tracking-widest uppercase text-white/30 mb-4">Pages</p>
+            <p className="text-xs font-medium text-white/30 mb-4">Pages</p>
             <nav className="flex flex-col gap-3">
               {footerLinks.map(({ href, label }) => (
                 <Link
@@ -44,10 +44,10 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <p className="text-xs font-semibold tracking-widest uppercase text-white/30 mb-4">Get in touch</p>
+            <p className="text-xs font-medium text-white/30 mb-4">Get in touch</p>
             <a
               href="mailto:hello@nmcconsulting.co.uk"
-              className="text-sm text-white/60 hover:text-white transition-colors block mb-3"
+              className="text-sm text-white/60 hover:text-amber-light transition-colors block mb-3"
             >
               hello@nmcconsulting.co.uk
             </a>
